@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Screenshot 2022-09-07 224200.png" type="Texture" id=2]
+[ext_resource path="res://enemy spawner.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="Screenshot2022-09-07224200" type="Sprite" parent="."]
+position = Vector2( 272, 485 )
+scale = Vector2( 0.781116, 1.97154 )
+texture = ExtResource( 2 )
+
+[node name="enemy spawner" parent="." instance=ExtResource( 3 )]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 260, 900 )
