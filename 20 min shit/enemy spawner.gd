@@ -10,8 +10,9 @@ func _ready():
 
 func spawn_enemy():
 	var index = randi() % spawn_positions.size()
-	var enemy = Enemy.instance()
+	var enemy = Enemy.instance() 
 	enemy.global_position = spawn_positions[index].global_position
+	enemy.connect("enemy_died", get_tree().current_scene, "score")
 	add_child(enemy) 
 
 func _on_Timer_timeout():

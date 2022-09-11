@@ -1,5 +1,7 @@
 extends Area2D
 
+signal enemy_died
+
 export (int) var speed = 150
 
 var hp = 1
